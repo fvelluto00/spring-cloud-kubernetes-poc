@@ -1,0 +1,12 @@
+auth:
+  username: microa_user
+  password: microa_pass
+  database: microservice_a_db
+
+primary:
+  persistence:
+    enabled: false
+
+service:
+  type: ClusterIP
+  port: 5432

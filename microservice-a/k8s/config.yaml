@@ -5,3 +5,14 @@ metadata:
   namespace: microservices
 data:
   bean.message: Welcome to Microservice A from ConfigMap!
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-a-db-config
+  namespace: microservices
+data:
+  DB_HOST: microservice-a-postgres-postgresql
+  DB_PORT: "5432"
+  DB_NAME: microservice_a_db

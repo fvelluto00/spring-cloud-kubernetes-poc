@@ -2,6 +2,7 @@ package com.spring.cloud.k8s.poc.microservice_a.controllers;
 
 import com.spring.cloud.k8s.poc.microservice_a.dtos.RequestMessageDto;
 import com.spring.cloud.k8s.poc.microservice_a.configs.MicroserviceAConfig;
+import com.spring.cloud.k8s.poc.microservice_a.service.MessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ public class MessagesController {
 
     @Autowired
     private MicroserviceAConfig config;
+    @Autowired
+    private MessageService messageService;
 
     /**
      * Return a welcome message.
@@ -35,6 +38,7 @@ public class MessagesController {
             @RequestBody RequestMessageDto body
     ) {
         logger.info("Received message: {}", body.getMessage());
+        messageService.save(body.getMessage(), "LOG_ONLY_ENDPOINT");
     }
 
     /**
@@ -47,5 +51,6 @@ public class MessagesController {
             @RequestBody RequestMessageDto body
     ) {
         logger.info("Received message for Microservice B: {}", body.getMessage());
+        messageService.save(body.getMessage(), "TO_MICROSERVICE_B_ENDPOINT");
     }
 }
