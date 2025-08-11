@@ -31,6 +31,15 @@ if errorlevel 1 (
 )
 
 REM ===============================
+REM Restarting pods
+REM ===============================
+kubectl delete pod -l app=microservice-a -n microservices
+if errorlevel 1 (
+    echo Kubernetes pod restart failed!
+    exit /b 1
+)
+
+REM ===============================
 REM Show deployment status
 REM ===============================
 echo Checking pods...
@@ -38,4 +47,3 @@ kubectl get pods -n microservices
 
 echo.
 echo Deployment completed successfully!
-pause

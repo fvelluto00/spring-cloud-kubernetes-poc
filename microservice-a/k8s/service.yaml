@@ -4,6 +4,7 @@ metadata:
   name: microservice-a
   namespace: microservices
 spec:
+  type: LoadBalancer
   selector:
     app: microservice-a
   ports:

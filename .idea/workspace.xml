@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/spring-cloud-kubernetes-poc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/k8s/deploy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/k8s/service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/dtos/RequestMessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Refactor microservices, basic microservice A implementation with k8s deploy">
+      <change afterPath="$PROJECT_DIR$/microservice-a/k8s/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/configs/MicroserviceAConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-b/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/k8s/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/k8s/service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,9 +88,22 @@
       <option name="presentableId" value="Default" />
       <updated>1754647861902</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactor microservices, basic microservice A implementation with k8s deploy">
+      <option name="closed" value="true" />
+      <created>1754908461025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754908461025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor microservices, basic microservice A implementation with k8s deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor microservices, basic microservice A implementation with k8s deploy" />
   </component>
 </project>

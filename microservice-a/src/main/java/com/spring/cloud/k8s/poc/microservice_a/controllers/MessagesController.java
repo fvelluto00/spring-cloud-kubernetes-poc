@@ -1,15 +1,29 @@
 package com.spring.cloud.k8s.poc.microservice_a.controllers;
 
 import com.spring.cloud.k8s.poc.microservice_a.dtos.RequestMessageDto;
+import com.spring.cloud.k8s.poc.microservice_a.configs.MicroserviceAConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-@RestController(value = "/messages")
+@RequestMapping(value = "/messages")
+@RestController
 public class MessagesController {
     private final Logger logger = LoggerFactory.getLogger(MessagesController.class);
+
+    @Autowired
+    private MicroserviceAConfig config;
+
+    /**
+     * Return a welcome message.
+     *
+     * @return welcome message
+     */
+    @GetMapping
+    public String getWelcomeMessage() {
+        return config.getMessage();
+    }
 
     /**
      * Endpoint to receive messages and simply log them.

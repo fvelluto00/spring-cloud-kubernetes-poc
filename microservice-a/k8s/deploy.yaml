@@ -13,6 +13,7 @@ spec:
       labels:
         app: microservice-a
     spec:
+      serviceAccountName: microservice-a-sa
       containers:
         - name: microservice-a
           image: microservice-a:latest
