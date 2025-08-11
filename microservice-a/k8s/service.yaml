@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-a
+  namespace: microservices
+spec:
+  selector:
+    app: microservice-a
+  ports:
+    - port: 8080
+      targetPort: 8080

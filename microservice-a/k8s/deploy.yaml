@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-a
+  namespace: microservices
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microservice-a
+  template:
+    metadata:
+      labels:
+        app: microservice-a
+    spec:
+      containers:
+        - name: microservice-a
+          image: microservice-a:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
