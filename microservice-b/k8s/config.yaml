@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-b
+  namespace: microservices
+data:
+  bean.message: Welcome to Microservice B from ConfigMap!
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-b-db-config
+  namespace: microservices
+data:
+  DB_HOST: microservice-b-postgres-postgresql
+  DB_PORT: "5432"
+  DB_NAME: microservice_b_db

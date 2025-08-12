@@ -1,0 +1,12 @@
+auth:
+  username: microb_user
+  password: microb_pass
+  database: microservice_b_db
+
+primary:
+  persistence:
+    enabled: false
+
+service:
+  type: ClusterIP
+  port: 5432

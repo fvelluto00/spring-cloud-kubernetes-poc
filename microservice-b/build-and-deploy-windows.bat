@@ -4,8 +4,8 @@ setlocal
 REM ===============================
 REM Build Docker image
 REM ===============================
-echo Building Docker image: microservice-a:latest ...
-docker build -t microservice-a:latest .
+echo Building Docker image: microservice-b:latest ...
+docker build -t microservice-b:latest .
 if errorlevel 1 (
     echo Docker build failed!
     exit /b 1
@@ -29,14 +29,14 @@ helm repo update
 
 kubectl apply -f k8s/secret.yaml
 
-helm upgrade --install microservice-a-postgres bitnami/postgresql ^
+helm upgrade --install microservice-b-postgres bitnami/postgresql ^
   --namespace microservices ^
   -f ./values.yaml
 
 REM ===============================
 REM Deploy to Kubernetes
 REM ===============================
-echo Deploying microservice-a to Kubernetes...
+echo Deploying microservice-b to Kubernetes...
 kubectl apply -f .\k8s\ --namespace=microservices
 if errorlevel 1 (
     echo Kubernetes deployment failed!
@@ -46,8 +46,8 @@ if errorlevel 1 (
 REM ===============================
 REM Restarting pods
 REM ===============================
-kubectl delete pod -l app=microservice-a -n microservices
-kubectl delete pod -l app.kubernetes.io/name=postgresql,app.kubernetes.io/instance=microservice-a-postgres -n microservices
+kubectl delete pod -l app=microservice-b -n microservices
+kubectl delete pod -l app.kubernetes.io/name=postgresql,app.kubernetes.io/instance=microservice-b-postgres -n microservices
 
 if errorlevel 1 (
     echo Kubernetes pod restart failed!

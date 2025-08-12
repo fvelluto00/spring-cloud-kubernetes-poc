@@ -1,0 +1,13 @@
+package com.spring.cloud.k8s.poc.microservice_b.dtos;
+
+public class RequestMessageDto {
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservice-a
+  name: microservice-b
   namespace: microservices
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: microservice-a
+      app: microservice-b
   template:
     metadata:
       labels:
-        app: microservice-a
+        app: microservice-b
     spec:
-      serviceAccountName: microservice-a-sa
+      serviceAccountName: microservice-b-sa
       containers:
-        - name: microservice-a
-          image: microservice-a:latest
+        - name: microservice-b
+          image: microservice-b:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -24,27 +24,27 @@ spec:
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-a-db-config
+                  name: microservice-b-db-config
                   key: DB_HOST
             - name: DB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-a-db-config
+                  name: microservice-b-db-config
                   key: DB_PORT
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-a-db-config
+                  name: microservice-b-db-config
                   key: DB_NAME
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: microservice-a-postgres-secret
+                  name: microservice-b-postgres-secret
                   key: postgres-user
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: microservice-a-postgres-secret
+                  name: microservice-b-postgres-secret
                   key: postgres-password
             - name: SPRING_DATASOURCE_URL
               value: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
