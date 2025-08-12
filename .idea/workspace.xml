@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Spirng cloud kubernetes read and inject config map into properties">
-      <change afterPath="$PROJECT_DIR$/microservice-a/k8s/secret.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/entities/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/repositories/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-a/values.yaml" afterDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Microservice A connect to depolyed database with secret user and pass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/k8s/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/k8s/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/k8s/deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/k8s/deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "fvelluto00"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/fvelluto00/spring-cloud-kubernetes-poc.git",
+    "accountId": "d81062bc-33ea-43e9-9ae6-0fbd536a42fb"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/microservice-a/src/main/java/com/velluto/spring/cloud/k8s/poc/MicroserviceAApplication.java" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -50,6 +51,7 @@
     "Application.MicroserviceAApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/f.velluto/Desktop/spring-cloud-kubernetes-poc",
@@ -108,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754915752417</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Microservice A connect to depolyed database with secret user and pass">
+      <option name="closed" value="true" />
+      <created>1754922708554</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754922708554</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -117,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor microservices, basic microservice A implementation with k8s deploy" />
     <MESSAGE value="Spirng cloud kubernetes read and inject config map into properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spirng cloud kubernetes read and inject config map into properties" />
+    <MESSAGE value="Microservice A connect to depolyed database with secret user and pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Microservice A connect to depolyed database with secret user and pass" />
   </component>
 </project>
