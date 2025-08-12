@@ -4,36 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Enable reload of config and secrets">
-      <change afterPath="$PROJECT_DIR$/microservice-b/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/build-and-deploy-windows.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/k8s/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/k8s/deploy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/k8s/rbac.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/k8s/secret.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/k8s/service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/MicroserviceBApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/configs/MicroserviceAConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/dtos/RequestMessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/entities/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/repositories/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-b/values.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Create microservice B">
+      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/configs/LoadBalancedRestTemplateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/k8s/deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/k8s/deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/bootstrap.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +90,7 @@
       <module name="microservice-a" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.spring.cloud.k8s.poc.microservice_a.*" />
+          <option name="PATTERN" value="com.spring.cloud.k8s.poc.microservice_a.configs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755002021706</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create microservice B">
+      <option name="closed" value="true" />
+      <created>1755004780185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755004780185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -204,6 +188,7 @@
     <MESSAGE value="Spirng cloud kubernetes read and inject config map into properties" />
     <MESSAGE value="Microservice A connect to depolyed database with secret user and pass" />
     <MESSAGE value="Enable reload of config and secrets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enable reload of config and secrets" />
+    <MESSAGE value="Create microservice B" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create microservice B" />
   </component>
 </project>
