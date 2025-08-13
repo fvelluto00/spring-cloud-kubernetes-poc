@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Circuit breaker with resilience4j">
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/service/UnstableMessageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-b/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/build-and-deploy-windows.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755013973181</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Circuit breaker with resilience4j">
+      <option name="closed" value="true" />
+      <created>1755077110121</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1755077110121</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -212,6 +216,7 @@
     <MESSAGE value="Enable reload of config and secrets" />
     <MESSAGE value="Create microservice B" />
     <MESSAGE value="Service discovery to communicate with microservice B, with client side load balancer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service discovery to communicate with microservice B, with client side load balancer" />
+    <MESSAGE value="Circuit breaker with resilience4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="Circuit breaker with resilience4j" />
   </component>
 </project>

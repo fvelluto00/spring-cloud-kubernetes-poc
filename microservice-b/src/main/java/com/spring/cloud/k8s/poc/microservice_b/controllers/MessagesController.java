@@ -70,6 +70,6 @@ public class MessagesController {
         logger.info("Received message: {}", body.getMessage());
         messageService.save(body.getMessage(), "UNSTABLE_ENDPOINT");
         logger.info("Responding successfully after {} ms of simulated delay", delay);
-        return "ok";
+        throw new RuntimeException("Simulated service error");
     }
 }
