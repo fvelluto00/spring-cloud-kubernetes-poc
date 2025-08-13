@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 @RequestMapping(value = "/messages")
 @RestController
 public class MessagesController {
@@ -29,7 +31,7 @@ public class MessagesController {
     }
 
     /**
-     * Endpoint to receive messages and simply log them.
+     * Endpoint to receive messages.
      *
      * @param body the request body containing the message
      */
@@ -39,5 +41,35 @@ public class MessagesController {
     ) {
         logger.info("Received message: {}", body.getMessage());
         messageService.save(body.getMessage(), "LOG_ONLY_ENDPOINT");
+    }
+
+    /**
+     * Endpoint to receive messages, it simulates random latency and errors for circuit breaker
+     *
+     * @param body the request body containing the message
+     * @return a message string
+     */
+    @PostMapping("/unstable")
+    public String postMessageUnstable(
+            @RequestBody RequestMessageDto body
+    ) {
+        int delay = ThreadLocalRandom.current().nextInt(500, 3000);
+        boolean fail = ThreadLocalRandom.current().nextInt(100) < 20;
+
+        try {
+            Thread.sleep(delay);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        if (fail) {
+            logger.warn("Simulated failure after {} ms", delay);
+            throw new RuntimeException("Simulated service error");
+        }
+
+        logger.info("Received message: {}", body.getMessage());
+        messageService.save(body.getMessage(), "UNSTABLE_ENDPOINT");
+        logger.info("Responding successfully after {} ms of simulated delay", delay);
+        return "ok";
     }
 }

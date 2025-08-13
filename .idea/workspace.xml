@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Create microservice B">
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/configs/LoadBalancedRestTemplateConfig.java" afterDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Circuit breaker with resilience4j">
+      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/build-and-deploy-windows.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/MicroserviceAApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/controllers/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-b/build-and-deploy-windows.bat" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/build-and-deploy-windows.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,11 +180,30 @@
       <option name="project" value="LOCAL" />
       <updated>1755004780185</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Service discovery to communicate with microservice B, with client side load balancer">
+      <option name="closed" value="true" />
+      <created>1755013973181</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755013973181</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor microservices, basic microservice A implementation with k8s deploy" />
@@ -189,6 +211,7 @@
     <MESSAGE value="Microservice A connect to depolyed database with secret user and pass" />
     <MESSAGE value="Enable reload of config and secrets" />
     <MESSAGE value="Create microservice B" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create microservice B" />
+    <MESSAGE value="Service discovery to communicate with microservice B, with client side load balancer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service discovery to communicate with microservice B, with client side load balancer" />
   </component>
 </project>

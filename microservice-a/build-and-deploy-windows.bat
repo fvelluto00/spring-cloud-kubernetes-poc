@@ -46,8 +46,8 @@ if errorlevel 1 (
 REM ===============================
 REM Restarting pods
 REM ===============================
-kubectl delete pod -l app=microservice-a -n microservices
 kubectl delete pod -l app.kubernetes.io/name=postgresql,app.kubernetes.io/instance=microservice-a-postgres -n microservices
+kubectl delete pod -l app=microservice-a -n microservices
 
 if errorlevel 1 (
     echo Kubernetes pod restart failed!
