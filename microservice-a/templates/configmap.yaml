@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-a
+  namespace: {{ .Values.namespace }}
+data:
+  bean.message: {{ .Values.config.beanMessage | quote }}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-a-db-config
+  namespace: {{ .Values.namespace }}
+data:
+  DB_HOST: {{ .Values.auth.host | quote }}
+  DB_PORT: {{ .Values.auth.port | quote }}
+  DB_NAME: {{ .Values.auth.database | quote }}

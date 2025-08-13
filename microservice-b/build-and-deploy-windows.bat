@@ -27,19 +27,21 @@ echo Installing PostgreSQL in namespace microservices...
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
-kubectl apply -f k8s/secret.yaml
-
 helm upgrade --install microservice-b-postgres bitnami/postgresql ^
   --namespace microservices ^
   -f ./values.yaml
 
 REM ===============================
-REM Deploy to Kubernetes
+REM Deploy microservice-b via Helm
 REM ===============================
-echo Deploying microservice-b to Kubernetes...
-kubectl apply -f .\k8s\ --namespace=microservices
+echo Deploying microservice-b via Helm...
+helm upgrade --install microservice-b . ^
+  --namespace microservices ^
+  --set image.repository=microservice-b ^
+  --set image.tag=latest
+
 if errorlevel 1 (
-    echo Kubernetes deployment failed!
+    echo Helm deployment failed!
     exit /b 1
 )
 

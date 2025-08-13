@@ -1,0 +1,6 @@
+apiVersion: v2
+name: microservice-b
+description: Helm chart for Microservice B (Spring Cloud Kubernetes PoC)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

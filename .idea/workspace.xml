@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Circuit breaker with resilience4j">
-      <change afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/service/UnstableMessageService.java" afterDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/java/com/spring/cloud/k8s/poc/microservice_a/schedulers/UnstableMicroserviceBRequestScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/src/main/java/com/spring/cloud/k8s/poc/microservice_b/controllers/MessagesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755077110121</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix Circuit breaker with resilience4j">
+      <option name="closed" value="true" />
+      <created>1755077860538</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1755077860538</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1755077894896</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1755077894896</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -217,6 +230,8 @@
     <MESSAGE value="Create microservice B" />
     <MESSAGE value="Service discovery to communicate with microservice B, with client side load balancer" />
     <MESSAGE value="Circuit breaker with resilience4j" />
-    <option name="LAST_COMMIT_MESSAGE" value="Circuit breaker with resilience4j" />
+    <MESSAGE value="Fix Circuit breaker with resilience4j" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
 </project>

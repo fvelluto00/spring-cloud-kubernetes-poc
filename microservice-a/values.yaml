@@ -1,12 +1,29 @@
+namespace: microservices
+
+replicaCount: 1
+
+image:
+  repository: microservice-a
+  tag: latest
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  name: microservice-a-sa
+
+rbac:
+  roleName: microservice-a-role
+  roleBindingName: microservice-a-rb
+
+config:
+  beanMessage: "Welcome to Microservice A from ConfigMap!"
+
 auth:
   username: microa_user
   password: microa_pass
   database: microservice_a_db
-
-primary:
-  persistence:
-    enabled: false
+  host: microservice-a-postgres-postgresql
+  port: "5432"
 
 service:
-  type: ClusterIP
-  port: 5432
+  type: LoadBalancer
+  port: 8080

@@ -1,50 +1,50 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservice-b
-  namespace: microservices
+  name: microservice-a
+  namespace: {{ .Values.namespace }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: microservice-b
+      app: microservice-a
   template:
     metadata:
       labels:
-        app: microservice-b
+        app: microservice-a
     spec:
-      serviceAccountName: microservice-b-sa
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       containers:
-        - name: microservice-b
-          image: microservice-b:latest
-          imagePullPolicy: IfNotPresent
+        - name: microservice-a
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 8080
+            - containerPort: {{ .Values.service.port }}
           env:
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-b-db-config
+                  name: microservice-a-db-config
                   key: DB_HOST
             - name: DB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-b-db-config
+                  name: microservice-a-db-config
                   key: DB_PORT
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: microservice-b-db-config
+                  name: microservice-a-db-config
                   key: DB_NAME
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: microservice-b-postgres-secret
+                  name: microservice-a-postgres-secret
                   key: postgres-user
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: microservice-b-postgres-secret
+                  name: microservice-a-postgres-secret
                   key: postgres-password
             - name: SPRING_DATASOURCE_URL
               value: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
