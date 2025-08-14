@@ -6,7 +6,16 @@ Make sure you have installed the following:
 - Docker Desktop (Docker daemon + Kubernetes)
 - Helm
 
-## Build and Deploy
+## Deploy ELK Stack for Logging and Monitoring
+
+Deploy the ELK for centralized logging and monitoring of the microservices.
+
+```
+cd logging
+./deploy-windows
+```
+
+## Build and Deploy Microservices
 
 The PoC is made of two different microservices.
 In order to make the build and deploy on local Kubernetes (on Windows), execute:
