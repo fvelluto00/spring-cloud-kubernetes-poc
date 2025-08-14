@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="Deploy microservices with Helm charts">
-      <change afterPath="$PROJECT_DIR$/logging/deploy-windows.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/elasticsearch.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/filebeat-configmap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/filebeat-daemonset.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/filebeat-rbac.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/kibana.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/logstash-configmap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/logstash.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging/namespace.yaml" afterDir="false" />
+    <list default="true" id="2266be83-9843-4875-b26b-5250dbed40bb" name="Changes" comment="ELK Stack for centralized logging">
+      <change afterPath="$PROJECT_DIR$/microservice-a/templates/servicemonitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-b/templates/servicemonitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/deploy-windows.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/templates/rbac.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/templates/rbac.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-a/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-a/templates/service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-b/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-b/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-b/templates/rbac.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/templates/rbac.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-b/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-b/templates/service.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,23 +68,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MicroserviceAApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MicroserviceBApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/f.velluto/Desktop/spring-cloud-kubernetes-poc/microservice-b&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2649494&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MicroserviceAApplication.executor": "Run",
+    "Application.MicroserviceBApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/f.velluto/Desktop/spring-cloud-kubernetes-poc/microservice-b/templates",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2649494"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\f.velluto\Desktop\spring-cloud-kubernetes-poc\microservice-b\templates" />
       <recent name="C:\Users\f.velluto\Desktop\spring-cloud-kubernetes-poc\microservice-b" />
       <recent name="C:\Users\f.velluto\Desktop\spring-cloud-kubernetes-poc" />
     </key>
@@ -226,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755087844157</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ELK Stack for centralized logging">
+      <option name="closed" value="true" />
+      <created>1755167211872</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1755167211874</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -254,6 +263,7 @@
     <MESSAGE value="Fix Circuit breaker with resilience4j" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Deploy microservices with Helm charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy microservices with Helm charts" />
+    <MESSAGE value="ELK Stack for centralized logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="ELK Stack for centralized logging" />
   </component>
 </project>

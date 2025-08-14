@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: microservice-a
   namespace: {{ .Values.namespace }}
+  labels:
+    app: microservice-a
 spec:
   type: {{ .Values.service.type }}
   selector:
@@ -10,3 +12,4 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.port }}
+      name: web

@@ -6,15 +6,6 @@ Make sure you have installed the following:
 - Docker Desktop (Docker daemon + Kubernetes)
 - Helm
 
-## Deploy ELK Stack for Logging and Monitoring
-
-Deploy the ELK for centralized logging and monitoring of the microservices.
-
-```
-cd logging
-./deploy-windows
-```
-
 ## Build and Deploy Microservices
 
 The PoC is made of two different microservices.
@@ -28,4 +19,21 @@ cd microservice-a
 # build microservice b
 cd microservice-b
 ./build-and-deploy-windows
+```
+
+## Deploy ELK Stack for Logging and Monitoring
+
+Deploy the ELK for centralized logging and monitoring of the microservices.
+
+```
+cd logging
+./deploy-windows
+```
+
+## Deploy Prometheus for Metrics
+
+Deploy Prometheus for Kubernetes, enabling metrics monitoring.
+```
+cd monitoring
+./deploy-windows
 ```
