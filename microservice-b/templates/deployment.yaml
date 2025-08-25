@@ -20,6 +20,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.service.port }}
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 200m
           env:
             - name: DB_HOST
               valueFrom:

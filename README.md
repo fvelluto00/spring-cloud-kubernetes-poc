@@ -33,7 +33,17 @@ cd logging
 ## Deploy Prometheus for Metrics
 
 Deploy Prometheus for Kubernetes, enabling metrics monitoring.
+
 ```
 cd monitoring
 ./deploy-windows
+```
+
+## Install Metrics Server on Docker Desktop cluster
+
+Metrics Server is not installed by default on Docker Desktop Kubernetes cluster.
+
+```
+cd autoscaling
+./install-metrics-server-docker-desktop-windows.bat
 ```
