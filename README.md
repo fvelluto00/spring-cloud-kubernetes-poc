@@ -47,3 +47,12 @@ Metrics Server is not installed by default on Docker Desktop Kubernetes cluster.
 cd autoscaling
 ./install-windows
 ```
+
+## Deploy Otel Collector and Zipkin for Tracing
+
+Deploy OpenTelemetry Collector and Zipkin for distributed tracing.
+
+```
+cd tracing
+./deploy-windows
+```
